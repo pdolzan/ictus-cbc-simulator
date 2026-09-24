@@ -1,4 +1,3 @@
-
 import math
 from pathlib import Path
 import pandas as pd
@@ -90,6 +89,20 @@ div[data-testid="stSelectbox"] [aria-invalid="true"] {{
  border-color:#D9E1E8 !important;
  box-shadow:none !important;
 }}
+div[data-testid="stSelectbox"] [aria-invalid="true"] {{
+ border-color:#D9E1E8 !important;
+ box-shadow:none !important;
+}}
+
+/* Tab label font style */
+button[data-baseweb="tab"] div[data-testid="stMarkdownContainer"] p {{
+    font-size: 19px !important;
+    font-weight: 600 !important;
+    color: #003A6E !important;
+    -webkit-text-fill-color: #003A6E !important;
+    margin-right: 3px !important;
+}}
+
 </style>
 """, unsafe_allow_html=True)
 
@@ -260,20 +273,6 @@ tab1, tab2, tab3, tab4 = st.tabs([
     "Vizitka"
 ])
 
-st.markdown(
-    """
-    <style>
-    /* Tab label font style */
-    button[data-baseweb="tab"] div[data-testid="stMarkdownContainer"] p {
-        font-size: 19px !important;
-        font-weight: 600 !important;
-        color: #003A6E !important;
-        margin-right: 3px !important;
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
 
 with tab1:
     method = "Share of Preference (logit)"

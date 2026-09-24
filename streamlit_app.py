@@ -36,15 +36,36 @@ h1,h2,h3 {{ color:{NAVY}; }}
 div[data-testid="stMetric"] {{
  background:{LIGHT_GREY}; border:1px solid {MID_GREY}; border-radius:12px; padding:16px;
 }}
-[data-testid="stTabs"] button {{
- color:{NAVY} !important;
+/* TAB TEXT - vedno NAVY */
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"] {{
+    color:{NAVY} !important;
 }}
-[data-testid="stTabs"] button p {{
- color:{NAVY} !important;
+
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"] p {{
+    color:{NAVY} !important;
 }}
-[data-testid="stTabs"] button[aria-selected="true"] {{
- color:{NAVY} !important;
- border-bottom-color:red !important;
+
+/* AKTIVEN TAB - tekst ostane NAVY */
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="true"] {{
+    color:{NAVY} !important;
+}}
+
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="true"] p {{
+    color:{NAVY} !important;
+}}
+
+/* NEAKTIVEN TAB - tekst prav tako NAVY */
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="false"] {{
+    color:{NAVY} !important;
+}}
+
+.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="false"] p {{
+    color:{NAVY} !important;
+}}
+
+/* Rdeča črta pod aktivnim tabom */
+.stTabs [data-baseweb="tab-highlight"] {{
+    background-color:red !important;
 }}
 .attr-label {{
  min-height:38px; display:flex; align-items:center; font-weight:650; color:{NAVY};

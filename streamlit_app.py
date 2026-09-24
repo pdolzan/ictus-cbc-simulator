@@ -71,15 +71,6 @@ div[data-testid="stMetric"] {{
 }}
 .delta-big {{ color:#003A6E; font-weight:800; font-size:1.65rem; }}
 
-button[data-baseweb="tab"] p {{
-    font-size: 19px !important;
-    font-weight: 600 !important;
-}}
-
-button[data-baseweb="tab"] {{
-    padding: 12px 18px !important;
-}}
-
 /* Package dropdowns: no red border */
 div[data-baseweb="select"] > div {{
  border-color:#D9E1E8 !important;
@@ -263,11 +254,26 @@ znotraj tega eksperimenta.*
 st.write("")
 
 tab1, tab2, tab3, tab4 = st.tabs([
-    ":blue[Simulator]",
-    ":blue[Pomembnost atributov]",
-    ":blue[O eksperimentu]",
-    ":blue[Vizitka]"
+    "Simulator",
+    "Pomembnost atributov",
+    "O eksperimentu",
+    "Vizitka"
 ])
+
+st.markdown(
+    """
+    <style>
+    /* Tab label font style */
+    button[data-baseweb="tab"] div[data-testid="stMarkdownContainer"] p {
+        font-size: 19px !important;
+        font-weight: 600 !important;
+        color: #003A6E !important;
+        margin-right: 3px !important;
+    }
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 with tab1:
     method = "Share of Preference (logit)"

@@ -36,30 +36,6 @@ h1,h2,h3 {{ color:{NAVY}; }}
 div[data-testid="stMetric"] {{
  background:{LIGHT_GREY}; border:1px solid {MID_GREY}; border-radius:12px; padding:16px;
 }}
-
-/* TAB TEXT - vedno NAVY */
-div[data-testid="stTabs"] button[data-baseweb="tab"],
-div[data-testid="stTabs"] button[data-baseweb="tab"] *,
-div[data-testid="stTabs"] button[role="tab"],
-div[data-testid="stTabs"] button[role="tab"] * {{
-    color: #003A6E !important;
-    -webkit-text-fill-color: #003A6E !important;
-}}
-
-/* Aktivni in neaktivni tab - vedno NAVY */
-div[data-testid="stTabs"] button[aria-selected="true"],
-div[data-testid="stTabs"] button[aria-selected="true"] *,
-div[data-testid="stTabs"] button[aria-selected="false"],
-div[data-testid="stTabs"] button[aria-selected="false"] * {{
-    color: #003A6E !important;
-    -webkit-text-fill-color: #003A6E !important;
-}}
-
-/* Rdeča črta pod aktivnim tabom */
-div[data-testid="stTabs"] [data-baseweb="tab-highlight"] {{
-    background-color: red !important;
-}}
-
 .attr-label {{
  min-height:38px; display:flex; align-items:center; font-weight:650; color:{NAVY};
 }}
@@ -286,7 +262,12 @@ znotraj tega eksperimenta.*
 """)
 st.write("")
 
-tab1, tab2, tab3, tab4 = st.tabs(["Simulator", "Pomembnost atributov", "O eksperimentu", "Vizitka"])
+tab1, tab2, tab3, tab4 = st.tabs([
+    ":blue[Simulator]",
+    ":blue[Pomembnost atributov]",
+    ":blue[O eksperimentu]",
+    ":blue[Vizitka]"
+])
 
 with tab1:
     method = "Share of Preference (logit)"

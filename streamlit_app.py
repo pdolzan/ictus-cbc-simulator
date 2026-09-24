@@ -36,37 +36,30 @@ h1,h2,h3 {{ color:{NAVY}; }}
 div[data-testid="stMetric"] {{
  background:{LIGHT_GREY}; border:1px solid {MID_GREY}; border-radius:12px; padding:16px;
 }}
+
 /* TAB TEXT - vedno NAVY */
-.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"] {{
-    color:{NAVY} !important;
+div[data-testid="stTabs"] button[data-baseweb="tab"],
+div[data-testid="stTabs"] button[data-baseweb="tab"] *,
+div[data-testid="stTabs"] button[role="tab"],
+div[data-testid="stTabs"] button[role="tab"] * {{
+    color: #003A6E !important;
+    -webkit-text-fill-color: #003A6E !important;
 }}
 
-.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"] p {{
-    color:{NAVY} !important;
-}}
-
-/* AKTIVEN TAB - tekst ostane NAVY */
-.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="true"] {{
-    color:{NAVY} !important;
-}}
-
-.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="true"] p {{
-    color:{NAVY} !important;
-}}
-
-/* NEAKTIVEN TAB - tekst prav tako NAVY */
-.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="false"] {{
-    color:{NAVY} !important;
-}}
-
-.stTabs [data-baseweb="tab-list"] button[data-baseweb="tab"][aria-selected="false"] p {{
-    color:{NAVY} !important;
+/* Aktivni in neaktivni tab - vedno NAVY */
+div[data-testid="stTabs"] button[aria-selected="true"],
+div[data-testid="stTabs"] button[aria-selected="true"] *,
+div[data-testid="stTabs"] button[aria-selected="false"],
+div[data-testid="stTabs"] button[aria-selected="false"] * {{
+    color: #003A6E !important;
+    -webkit-text-fill-color: #003A6E !important;
 }}
 
 /* Rdeča črta pod aktivnim tabom */
-.stTabs [data-baseweb="tab-highlight"] {{
-    background-color:red !important;
+div[data-testid="stTabs"] [data-baseweb="tab-highlight"] {{
+    background-color: red !important;
 }}
+
 .attr-label {{
  min-height:38px; display:flex; align-items:center; font-weight:650; color:{NAVY};
 }}

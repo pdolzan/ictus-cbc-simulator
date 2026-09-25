@@ -441,8 +441,18 @@ with tab2:
         subset = subset.sort_values("Level", ascending=False)
 
         raw_levels = subset["Level"].astype(str).tolist()
-        if prefix.startswith("Neto plača") or prefix.startswith("Bonus"):
-            display_levels = [f"{level.replace('%', '').strip()}%" for level in raw_levels]
+
+        if prefix.startswith("Neto plača"):
+            display_levels = [
+                "enaka" if level.replace("%", "").strip() == "0"
+                else f"{level.replace('%', '').strip()}%"
+                for level in raw_levels
+            ]
+        elif prefix.startswith("Bonus"):
+            display_levels = [
+                f"{level.replace('%', '').strip()}%"
+                for level in raw_levels
+            ]
         else:
             display_levels = raw_levels
 

@@ -29,7 +29,6 @@ st.set_page_config(
 
 st.markdown(f"""
 <style>
-.stApp {{ background-color:{WHITE}; color:{TEXT}; }}
 .block-container {{ max-width:1180px; padding-top:2rem; padding-bottom:3rem; }}
 h1,h2,h3 {{ color:{NAVY}; }}
 div[data-testid="stMetric"] {{
@@ -70,36 +69,11 @@ div[data-testid="stMetric"] {{
 }}
 .delta-big {{ color:#003A6E; font-weight:800; font-size:1.65rem; }}
 
-/* Package dropdowns: no red border */
-div[data-baseweb="select"] > div {{
- border-color:#D9E1E8 !important;
- box-shadow:none !important;
- outline:none !important;
-}}
-div[data-baseweb="select"] > div:hover {{
- border-color:#003A6E !important;
-}}
-div[data-baseweb="select"] > div:focus,
-div[data-baseweb="select"] > div:focus-within {{
- border-color:#003A6E !important;
- box-shadow:0 0 0 1px #003A6E !important;
- outline:none !important;
-}}
-div[data-testid="stSelectbox"] [aria-invalid="true"] {{
- border-color:#D9E1E8 !important;
- box-shadow:none !important;
-}}
-div[data-testid="stSelectbox"] [aria-invalid="true"] {{
- border-color:#D9E1E8 !important;
- box-shadow:none !important;
-}}
-
 /* Tab label font style */
 button[data-baseweb="tab"] div[data-testid="stMarkdownContainer"] p {{
-    font-size: 19px !important;
+    font-size: 15px !important;
     font-weight: 600 !important;
     color: #003A6E !important;
-    -webkit-text-fill-color: #003A6E !important;
     margin-right: 3px !important;
 }}
 

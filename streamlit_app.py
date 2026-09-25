@@ -254,7 +254,7 @@ with tab1:
     defaults_a = {
         "Neto plača": "0",
         "Bonus": "5%",
-        "Delo od doma": "1 dan",
+        "Delo na daljavo": "1 dan",
         "Dopust": "25 dni",
         "Fleksibilni delavnik": "+/- 2uri",
         "Vlaganje v razvoj": "mentorstvo + interna izobraževanja",
@@ -263,7 +263,7 @@ with tab1:
     defaults_b = {
         "Neto plača": "+10%",
         "Bonus": "10%",
-        "Delo od doma": "2 dni",
+        "Delo na daljavo": "2 dni",
         "Dopust": "28 dni",
         "Fleksibilni delavnik": "fleksibilno razporejanje",
         "Vlaganje v razvoj": "1500 EUR na leto za razvoj po izbiri",
@@ -298,7 +298,7 @@ with tab1:
                 f"{label} – A",
                 meta["levels"],
                 index=meta["levels"].index(defaults_a[label]),
-                format_func=lambda x: "enaka" if label == "Neto plača" and x == "0%" else x,
+                format_func=lambda x: "enaka" if label == "Neto plača" and x == "0" else x,
                 key=f"A_{i}",
                 label_visibility="collapsed"
             )

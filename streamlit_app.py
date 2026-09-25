@@ -254,7 +254,7 @@ with tab1:
     defaults_a = {
         "Neto plača": "-10%",
         "Bonus": "5%",
-        "Delo na daljavo": "3 dan",
+        "Delo na daljavo": "3 dni",
         "Dopust": "30 dni",
         "Fleksibilni delavnik": "+/- 2uri",
         "Vlaganje v razvoj": "mentorstvo + interna izobraževanja",

@@ -333,12 +333,18 @@ with tab1:
             list(ATTRIBUTES.keys()),
             key="impact_attribute"
         )
-    current_level = package_a[impact_attr]
+    current_level = package_a[impact_attr]    
+    display_current_level = (
+    "enaka"
+    if impact_attr == "Neto plača" and current_level == "0"
+    else current_level
+)
     possible_levels = [x for x in ATTRIBUTES[impact_attr]["levels"] if x != current_level]
     with q2:
         impact_level = st.selectbox(
-            f"Nova raven (trenutno: {current_level})",
+            f"Nova raven (trenutno: {display_current_level})",
             possible_levels,
+            format_func=lambda x: "enaka" if impact_attr == "Neto plača" and x == "0" else x,
             key="impact_level"
         )
 
@@ -369,8 +375,13 @@ with tab1:
         )
 
     st.markdown(
+            display_impact_level = (
+            "enaka"
+            if impact_attr == "Neto plača" and impact_level == "0"
+            else impact_level
+        )
         f'<div class="note"><b>Primerjava:</b> Paket A: <b>{impact_attr}</b> '
-        f'{current_level} → <b>{impact_level}</b>. Vsi drugi atributi ostanejo enaki.</div>',
+        f'{display_current_level} → <b>{display_impact_level}</b>. Vsi drugi atributi ostanejo enaki.</div>',
         unsafe_allow_html=True
     )
 

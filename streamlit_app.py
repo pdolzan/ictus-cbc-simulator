@@ -575,6 +575,7 @@ with tab4:
     ">
         <a href="https://www.ictus.si/" target="_blank">Spletna stran</a>
         <a href="mailto:info@ictus.si">Email</a>
+        <a href="tel:+38641870158">Telefon: +386 41 870 158</a>
         <a href="https://www.linkedin.com/in/primozdolzan" target="_blank">LinkedIn Primož</a>
         <a href="https://si.linkedin.com/company/ictus-ona" target="_blank">LinkedIn Ictus</a>
     </div>

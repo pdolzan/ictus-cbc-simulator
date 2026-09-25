@@ -402,7 +402,7 @@ with tab2:
         tickfont=dict(color=NAVY),
         gridcolor=WHITE
     )
-    st.plotly_chart(fig_imp, use_container_width=True, config={"displayModeBar": False})
+    st.plotly_chart(fig_imp, width='stretch', config={"displayModeBar": False})
 
     st.caption(
         "Pomembnost je odvisna od atributov in razponov ravni, testiranih v eksperimentu."
@@ -510,7 +510,7 @@ with tab2:
 
         st.plotly_chart(
             fig_u,
-            use_container_width=True,
+            width='stretch',
             config={"displayModeBar": False, "staticPlot": True}
         )
 

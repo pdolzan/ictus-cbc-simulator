@@ -93,7 +93,7 @@ N = len(raw)
 ATTRIBUTES = {
     "Neto plača": {
         "prefix": "Neto plača (razlika od trenutne plače)",
-        "levels": ["-10%", "enaka", "+10%", "+20%"],
+        "levels": ["-10%", "0", "+10%", "+20%"],
     },
     "Bonus": {
         "prefix": "Bonus (letno nagrajevanje)",
@@ -252,18 +252,18 @@ with tab1:
     method = "Share of Preference (logit)"
 
     defaults_a = {
-        "Neto plača (razlika od trenutne plače)": "enaka",
-        "Bonus (letno nagrajevanje)": "5%",
-        "Delo od doma/na daljavo (tedensko)": "1 dan",
+        "Neto plača": "enaka",
+        "Bonus": "5%",
+        "Delo od doma": "1 dan",
         "Dopust": "25 dni",
         "Fleksibilni delavnik": "+/- 2uri",
         "Vlaganje v razvoj": "mentorstvo + interna izobraževanja",
         "Wellbeing in zdravje": "wellbeing budget",
     }
     defaults_b = {
-        "Neto plača (razlika od trenutne plače)": "+10%",
-        "Bonus (letno nagrajevanje)": "10%",
-        "Delo od doma/na daljavo (tedensko)": "2 dni",
+        "Neto plača": "+10%",
+        "Bonus": "10%",
+        "Delo od doma": "2 dni",
         "Dopust": "28 dni",
         "Fleksibilni delavnik": "fleksibilno razporejanje",
         "Vlaganje v razvoj": "1500 EUR na leto za razvoj po izbiri",
@@ -281,19 +281,37 @@ with tab1:
 
     package_a, package_b = {}, {}
     for i, (label, meta) in enumerate(ATTRIBUTES.items()):
-        c0, c1, c2 = st.columns([1.35, 2.3, 2.3], gap="medium", vertical_alignment="center")
+        c0, c1, c2 = st.columns(
+            [1.35, 2.3, 2.3],
+            gap="medium",
+            vertical_alignment="center"
+        )
+
         with c0:
-            st.markdown(f'<div class="attr-label">{label}</div>', unsafe_allow_html=True)
+            st.markdown(
+                f'<div class="attr-label">{meta["prefix"]}</div>',
+                unsafe_allow_html=True
+            )
+
         with c1:
             package_a[label] = st.selectbox(
-                f"{label} – A", meta["levels"],
+                f"{label} – A",
+                meta["levels"],
                 index=meta["levels"].index(defaults_a[label]),
-                key=f"A_{i}", label_visibility="collapsed")
+                format_func=lambda x: "enaka" if label == "Neto plača" and x == "0%" else x,
+                key=f"A_{i}",
+                label_visibility="collapsed"
+            )
+
         with c2:
             package_b[label] = st.selectbox(
-                f"{label} – B", meta["levels"],
+                f"{label} – B",
+                meta["levels"],
                 index=meta["levels"].index(defaults_b[label]),
-                key=f"B_{i}", label_visibility="collapsed")
+                format_func=lambda x: "enaka" if label == "Neto plača" and x == "0%" else x,
+                key=f"B_{i}",
+                label_visibility="collapsed"
+            )
 
     share_a, respondent_pa = simulate(package_a, package_b, method)
     share_b = 1 - share_a

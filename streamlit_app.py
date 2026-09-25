@@ -308,7 +308,7 @@ with tab1:
                 f"{label} – B",
                 meta["levels"],
                 index=meta["levels"].index(defaults_b[label]),
-                format_func=lambda x: "enaka" if label == "Neto plača" and x == "0%" else x,
+                format_func=lambda x: "enaka" if label == "Neto plača" and x == "0" else x,
                 key=f"B_{i}",
                 label_visibility="collapsed"
             )
@@ -375,14 +375,17 @@ with tab1:
         )
 
     st.markdown(
-            display_impact_level = (
+        display_impact_level = (
             "enaka"
             if impact_attr == "Neto plača" and impact_level == "0"
             else impact_level
         )
-        f'<div class="note"><b>Primerjava:</b> Paket A: <b>{impact_attr}</b> '
-        f'{display_current_level} → <b>{display_impact_level}</b>. Vsi drugi atributi ostanejo enaki.</div>',
-        unsafe_allow_html=True
+
+        st.markdown(
+            f'<div class="note"><b>Primerjava:</b> Paket A: <b>{impact_attr}</b> '
+            f'{display_current_level} → <b>{display_impact_level}</b>. Vsi drugi atributi ostanejo enaki.</div>',
+            unsafe_allow_html=True
+        )
     )
 
 with tab2:

@@ -93,7 +93,7 @@ N = len(raw)
 ATTRIBUTES = {
     "Neto plača": {
         "prefix": "Neto plača (razlika od trenutne plače)",
-        "levels": ["-10%", "0", "+10%", "+20%"],
+        "levels": ["-10%", "enaka", "+10%", "+20%"],
     },
     "Bonus": {
         "prefix": "Bonus (letno nagrajevanje)",
@@ -252,18 +252,18 @@ with tab1:
     method = "Share of Preference (logit)"
 
     defaults_a = {
-        "Neto plača": "0",
-        "Bonus": "5%",
-        "Delo na daljavo": "1 dan",
+        "Neto plača (razlika od trenutne plače)": "enaka",
+        "Bonus (letno nagrajevanje)": "5%",
+        "Delo od doma/na daljavo (tedensko)": "1 dan",
         "Dopust": "25 dni",
         "Fleksibilni delavnik": "+/- 2uri",
         "Vlaganje v razvoj": "mentorstvo + interna izobraževanja",
         "Wellbeing in zdravje": "wellbeing budget",
     }
     defaults_b = {
-        "Neto plača": "+10%",
-        "Bonus": "10%",
-        "Delo na daljavo": "2 dni",
+        "Neto plača (razlika od trenutne plače)": "+10%",
+        "Bonus (letno nagrajevanje)": "10%",
+        "Delo od doma/na daljavo (tedensko)": "2 dni",
         "Dopust": "28 dni",
         "Fleksibilni delavnik": "fleksibilno razporejanje",
         "Vlaganje v razvoj": "1500 EUR na leto za razvoj po izbiri",

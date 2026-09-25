@@ -374,18 +374,16 @@ with tab1:
             unsafe_allow_html=True
         )
 
-    st.markdown(
-        display_impact_level = (
-            "enaka"
-            if impact_attr == "Neto plača" and impact_level == "0"
-            else impact_level
-        )
+    display_impact_level = (
+        "enaka"
+        if impact_attr == "Neto plača" and impact_level == "0"
+        else impact_level
+    )
 
-        st.markdown(
-            f'<div class="note"><b>Primerjava:</b> Paket A: <b>{impact_attr}</b> '
-            f'{display_current_level} → <b>{display_impact_level}</b>. Vsi drugi atributi ostanejo enaki.</div>',
-            unsafe_allow_html=True
-        )
+    st.markdown(
+        f'<div class="note"><b>Primerjava:</b> Paket A: <b>{impact_attr}</b> '
+        f'{display_current_level} → <b>{display_impact_level}</b>. Vsi drugi atributi ostanejo enaki.</div>',
+        unsafe_allow_html=True
     )
 
 with tab2:

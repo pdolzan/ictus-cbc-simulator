@@ -230,7 +230,7 @@ V tem pilotu so na izbire najbolj vplivali **plača, število dni dopusta in mo�
 dela od doma**. Manjši vpliv so imeli bonus, fleksibilnost delovnika, razvoj ter
 wellbeing in zdravje.
 
-Pomembno: rezultat je odvisen tudi od tega, **kakšne razpone možnosti smo vključili
+Pomembno: rezultat je odvisen tudi od tega, **kakšne možnosti smo vključili
 v eksperiment**.
 
 *To je pilotni eksperiment s 36 sodelujočimi, zato rezultatov ne moremo posplošiti

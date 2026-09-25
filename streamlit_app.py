@@ -252,19 +252,19 @@ with tab1:
     method = "Share of Preference (logit)"
 
     defaults_a = {
-        "Neto plača": "0",
+        "Neto plača": "-10%",
         "Bonus": "5%",
-        "Delo na daljavo": "1 dan",
-        "Dopust": "25 dni",
+        "Delo na daljavo": "3 dan",
+        "Dopust": "30 dni",
         "Fleksibilni delavnik": "+/- 2uri",
         "Vlaganje v razvoj": "mentorstvo + interna izobraževanja",
         "Wellbeing in zdravje": "wellbeing budget",
     }
     defaults_b = {
-        "Neto plača": "+10%",
+        "Neto plača": "+20%",
         "Bonus": "10%",
-        "Delo na daljavo": "2 dni",
-        "Dopust": "28 dni",
+        "Delo na daljavo": "0 dni",
+        "Dopust": "25 dni",
         "Fleksibilni delavnik": "fleksibilno razporejanje",
         "Vlaganje v razvoj": "1500 EUR na leto za razvoj po izbiri",
         "Wellbeing in zdravje": "specialisti + psihološka podpora",
@@ -515,7 +515,7 @@ with tab2:
 
             yref="paper",
 
-            text=f"<b>{attribute_label}</b>",
+            text=f"<b>{meta['prefix']}</b>",
 
             showarrow=False,
 

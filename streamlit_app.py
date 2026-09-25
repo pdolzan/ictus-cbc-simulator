@@ -71,7 +71,7 @@ div[data-testid="stMetric"] {{
 
 /* Tab label font style */
 button[data-baseweb="tab"] div[data-testid="stMarkdownContainer"] p {{
-    font-size: 15px !important;
+    font-size: 20px !important;
     font-weight: 600 !important;
     color: #003A6E !important;
     margin-right: 3px !important;

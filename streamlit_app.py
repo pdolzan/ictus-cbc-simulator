@@ -252,7 +252,7 @@ with tab1:
     method = "Share of Preference (logit)"
 
     defaults_a = {
-        "Neto plača": "enaka",
+        "Neto plača": "0",
         "Bonus": "5%",
         "Delo od doma": "1 dan",
         "Dopust": "25 dni",

@@ -237,6 +237,8 @@ v eksperiment**.
 na vse zaposlene v Sloveniji. Simulator prav tako ne napoveduje, ali bi nekdo
 dejansko sprejel zaposlitveno ponudbo – pokaže relativno privlačnost dveh paketov
 znotraj tega eksperimenta.*  
+
+Sodelujete tudi v eksperimentu na temo onboardinga: https://lnkd.in/dm2mKbZh
 """)
 st.write("")
 

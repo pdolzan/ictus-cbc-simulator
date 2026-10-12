@@ -233,7 +233,7 @@ wellbeing in zdravje.
 Pomembno: rezultat je odvisen tudi od tega, **kakšne možnosti smo vključili
 v eksperiment**.
 
-*To je pilotni eksperiment s 36 sodelujočimi, zato rezultatov ne moremo posplošiti
+*To je pilotni eksperiment s 50 sodelujočimi, zato rezultatov ne moremo posplošiti
 na vse zaposlene v Sloveniji. Simulator prav tako ne napoveduje, ali bi nekdo
 dejansko sprejel zaposlitveno ponudbo – pokaže relativno privlačnost dveh paketov
 znotraj tega eksperimenta.*  

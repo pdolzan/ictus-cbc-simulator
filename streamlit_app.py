@@ -226,7 +226,7 @@ Simulator te rezultate uporabi za primerjavo dveh paketov, ki ju sestavite sami.
 Odstotek pokaže, **kateri od obeh paketov bi bil glede na odločitve sodelujočih
 privlačnejši in za koliko**.
 
-V tem pilotu so na izbire najbolj vplivali **plača, število dni dopusta in možnost
+V tem pilotu so na izbire najbolj vplivali ** število dni dopusta, plača in možnost
 dela od doma**. Manjši vpliv so imeli bonus, fleksibilnost delovnika, razvoj ter
 wellbeing in zdravje.
 

@@ -560,7 +560,7 @@ with tab3:
     st.subheader("O pilotnem eksperimentu")
     st.markdown(
         f"""
-**Vzorec:** N=50 
+**Vzorec:** N=50  
 **Metoda:** Choice-Based Conjoint (CBC)  
 **Atributi:** 7  
 **Namen:** demonstracija trade-offov pri oblikovanju zaposlitvenega paketa.
